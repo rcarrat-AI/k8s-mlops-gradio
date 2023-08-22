@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: gradioapp
+  name: gradioapp-svc
+spec:
+  ports:
+  - port: 7860
+    protocol: TCP
+    targetPort: 7860
+  selector:
+    app: gradioapp
+  sessionAffinity: None
+  type: ClusterIP

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: gradioapp
+  name: gradioapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gradioapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: gradioapp
+    spec:
+      containers:
+      - image: quay.io/rcarrata/gradioapp:v1
+        name: gradioapp
+        ports:
+        - containerPort: 7860
+        resources: {}
