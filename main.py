@@ -9,7 +9,8 @@ inception_net = tf.keras.applications.MobileNetV2()
 response = requests.get("https://git.io/JJkYN")
 labels = response.text.split("\n")
 
-# Define a function classify_image(inp) that preprocesses input image, performs prediction using inception_net, and returns a dictionary of class labels with corresponding probabilities.
+# Define a function classify_image(inp) that preprocesses input image, performs prediction using 
+# inception_net, and returns a dictionary of class labels with corresponding probabilities.
 def classify_image(inp):
     inp = inp.reshape((-1, 224, 224, 3))
     inp = tf.keras.applications.mobilenet_v2.preprocess_input(inp)
