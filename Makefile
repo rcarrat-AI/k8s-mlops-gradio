@@ -13,3 +13,6 @@ tag:
 
 push: 
 	@${TOOL} push ${REGISTRY}/${NAME}:${VERSION}
+
+run:
+	@${TOOL} run -d -p 7860:7860 ${REGISTRY}/${NAME}:${VERSION}
