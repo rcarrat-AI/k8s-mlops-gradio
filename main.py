@@ -15,7 +15,7 @@ def classify_image(input_images):
     input_images = input_images.reshape((-1, 224, 224, 3))
     input_images = tf.keras.applications.mobilenet_v2.preprocess_input(input_images)
     prediction = mobile_net.predict(input_images).flatten()
-    return {labels[i]: floa t(prediction[i]) for i in range(1000)}
+    return {labels[i]: float(prediction[i]) for i in range(1000)}
 
 # Define a run function that sets up an image and label for classification using the gr.Interface.
 def run():
