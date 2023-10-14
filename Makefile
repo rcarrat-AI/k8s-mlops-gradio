@@ -1,7 +1,7 @@
 all: build tag push
 
 NAME=gradioapp
-VERSION=v4
+VERSION=v6
 REGISTRY="quay.io/rcarrata"
 TOOL="docker"
 
