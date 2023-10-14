@@ -12,7 +12,7 @@ RUN mkdir -p /app && \
 
 USER appuser
 
-RUN pip install --no-cache-dir -r /app/requirements.txt
+RUN pip install --no-cache-dir --user -r /app/requirements.txt
 
 COPY main.py /app
 
