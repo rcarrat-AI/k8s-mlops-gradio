@@ -9,6 +9,9 @@ RUN mkdir -p /app && \
 
 COPY ./requirements.txt /app/requirements.txt
 COPY main.py /app
+
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
 EXPOSE 7860
 
 CMD ["python", "main.py"]
