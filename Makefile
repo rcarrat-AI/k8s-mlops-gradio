@@ -3,7 +3,7 @@ all: build tag push
 NAME=gradioapp
 VERSION=v6
 REGISTRY="quay.io/rcarrata"
-TOOL="docker"
+TOOL="podman"
 
 build: 
 	@${TOOL} build -t localhost/${NAME}:${VERSION} .
