@@ -10,8 +10,9 @@ RUN dnf -y update \
 
 USER 1001
 
-COPY ./requirements.txt /app/requirements.txt
-RUN pip3 install --no-cache-dir -r /app/requirements.txt
+# Copy and install requirements
+COPY requirements.txt ./
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the application files
 COPY *.py ./

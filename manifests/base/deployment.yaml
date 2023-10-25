@@ -18,7 +18,7 @@ spec:
         app: gradioapp
     spec:
       containers:
-        - image: quay.io/rcarrata/gradioapp:v4
+        - image: quay.io/rcarrata/gradioapp:v7
           name: gradioapp
           ports:
             - containerPort: 7860
