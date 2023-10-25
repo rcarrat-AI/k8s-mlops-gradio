@@ -5,12 +5,13 @@ metadata:
   labels:
     app: gradioapp
 spec:
+  path: /
   to:
     kind: Service
     name: gradioapp-svc
-  tls:
-    termination: edge
-    insecureEdgeTerminationPolicy: Redirect
-    destinationCACertificate: ""
+    weight: 100
   port:
     targetPort: 7860
+  tls:
+    termination: edge
+  wildcardPolicy: None
